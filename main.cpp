@@ -39,7 +39,8 @@ int main()
 char llegarTarde; 
 char pickUpEvidence; 
 char victorPresentation;
-char victorOption;
+char victorOption, confirm;
+int optionEvidencia;
 
 
 
@@ -223,9 +224,35 @@ while (getline(HistoriaCase1, linea)){
 
 HistoriaCase1.close();
 
+cout << "\nVictor: ";
+do{
+cout << "Cual Evidencia quieres escuchar?  \n";
+cin >> optionEvidencia;
 
- cout << "\nVictor: ";
- cout << "  Cual Evidencia quieres escuchar?  \n";
+switch (optionEvidencia){
+case 1:
+    cout << "Nombre de Evidencia: " << e1.nombreEvidencia << endl;
+     while (getline(case1Evidence1txt, linea)){ 
+        cout << linea << endl;
+    }
+    case1Evidence1txt.close();
+    cout << "Estas seguro de utilizar esta evidencia s/n \n";
+    cin >> confirm;
+    break;
+
+case 2:
+    cout << "Nombre de Evidencia: " << e2.nombreEvidencia << endl;
+    cout << "Estas seguro de utilizar esta evidencia s/n \n";
+    cin >> confirm;
+    break;
+}
+}
+    while (confirm != 's' && confirm != 'S');
+
+    return 0;
+
+
+}
 
  //Aqui hacer un loop de evidencia que se pueden crear en un vector y que
  //a medida el juagador vaya seleccionando las evidencia del caso1 estas 
@@ -233,14 +260,19 @@ HistoriaCase1.close();
  //guardar la seleccion de evidencia tal vez en otro vector, en el que se pueda acceder a cualquier rato 
 
  //hacer cada uno de estos para cada caso. Los casos estan en Notion
- while (getline(case1Evidence1txt, linea)){ 
-        cout << linea << endl;
-    }
+
+    
 
 
 
 
     
-   return 0;
 
-}
+
+
+
+
+/*
+ while (getline(case1Evidence1txt, linea)){ 
+        cout << linea << endl;
+*/

@@ -49,27 +49,33 @@ Evidencia e1, e2, e3, e4, e5, e6;
 
 e1.nombreEvidencia = "No Status de la creatura";
 e1.tiempo = 3;
-e1.puntosPosibles = 3,2,6;
+e1.puntosMoralidad = 2;
+e1.puntosPosibles = 6;
 
 e2.nombreEvidencia = "Testimonio de la creatura";
-e2.tiempo = 5;
-e2.puntosPosibles = 4, 1, 8;
+e2.tiempo = 4;
+e2.puntosMoralidad = 1;
+e2.puntosPosibles = 8;
 
 e3.nombreEvidencia = "Propio Testimoio de Victima";
-e3.tiempo = 2;
-e3.puntosPosibles = 1, 4, 2;
+e3.tiempo = 1;
+e3.puntosMoralidad = 4;
+e3.puntosPosibles = 2;
 
 e4.nombreEvidencia = "Diario de Victor";
-e4.tiempo = 4;
-e4.puntosPosibles = 3, 2, 6;
+e4.tiempo = 3;
+e4.puntosMoralidad = 2;
+e4.puntosPosibles = 6;
 
 e5.nombreEvidencia = "Testimonio de Padre Vander";
-e5.tiempo = 6;
-e5.puntosPosibles = 1, 4, 2;
+e5.tiempo = 1;
+e5.puntosMoralidad = 4;
+e5.puntosPosibles = 2;
 
 e6.nombreEvidencia = "Argumento Bien Comun";
-e6.tiempo = 1;
-e6.puntosPosibles = 2, 3, 4;
+e6.tiempo = 2;
+e6.puntosMoralidad = 3;
+e6.puntosPosibles = 4;
 
 
 //Aqui hacer un un Array donde se guarde la Evidencia que se vaya recogiendo

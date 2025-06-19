@@ -40,7 +40,7 @@ char llegarTarde;
 char pickUpEvidence; 
 char victorPresentation;
 char victorOption, confirm;
-int optionEvidencia;
+int optionEvidencia, optionEvidencia2;
 
 
 
@@ -97,6 +97,13 @@ ifstream victorInfancia ("textFiles/victorInfancia.txt");
 ifstream victorCreacionCreatura ("textFiles/victorCreacionCreatura.txt");
 ifstream victorHowCarcel ("textFiles/victorHowCarcel.txt");
 ifstream HistoriaCase1 ("textFiles/HistoriaCase1.txt");
+ifstream case1Evidence2 ("textFiles/case1Evidence2.txt");
+ifstream case1Evidence3 ("textFiles/case1Evidence3.txt");
+ifstream case1Evidence4 ("textFiles/case1Evidence4.txt");
+ifstream case1Evidence5 ("textFiles/case1Evidence5.txt");
+ifstream case1Evidence6 ("textFiles/case1Evidence6.txt");
+
+
 
 
 
@@ -162,7 +169,7 @@ cout << linea << endl;
         cout << linea << endl;
     }
 
-    cout << "Como decides presentarte a Victor?";
+    cout << "Como decides presentarte a Victor?" << endl;
     cout << "a.) De una manera fria"<< endl;
     cout << "b.) De una manera Empatica" << endl;
 
@@ -231,34 +238,102 @@ while (getline(HistoriaCase1, linea)){
 HistoriaCase1.close();
 
 cout << "\nVictor: ";
-do{
-cout << "Cual Evidencia quieres escuchar?  \n";
+do {
+cout << "Cual Evidencia quieres escuchar? 1-6 \n";
 cin >> optionEvidencia;
 
-switch (optionEvidencia){
+switch (optionEvidencia) {
 case 1:
     cout << "Nombre de Evidencia: " << e1.nombreEvidencia << endl;
-     while (getline(case1Evidence1txt, linea)){ 
-        cout << linea << endl;
+    while (getline(case1Evidence1txt, linea)) { 
+    cout << linea << endl;
     }
     case1Evidence1txt.close();
-    cout << "Estas seguro de utilizar esta evidencia s/n \n";
-    cin >> confirm;
     break;
 
 case 2:
     cout << "Nombre de Evidencia: " << e2.nombreEvidencia << endl;
-    cout << "Estas seguro de utilizar esta evidencia s/n \n";
-    cin >> confirm;
+    while (getline(case1Evidence2, linea)) {
+    cout << linea << endl;
+    }
+    case1Evidence2.close();
     break;
-}
-}
-    while (confirm != 's' && confirm != 'S');
+
+case 3:
+    cout << "Nombre de Evidencia: " << e3.nombreEvidencia << endl;
+    while (getline(case1Evidence3, linea)) {
+    cout << linea << endl;
+    }
+    case1Evidence3.close();
+    break;
+
+case 4:
+    cout << "Nombre de Evidencia: " << e4.nombreEvidencia << endl;
+    while (getline(case1Evidence4, linea)) {
+    cout << linea << endl;
+    }
+    case1Evidence4.close();
+    break;
+
+case 5:
+    cout << "Nombre de Evidencia: " << e5.nombreEvidencia << endl;
+    while (getline(case1Evidence5, linea)) {
+    cout << linea << endl;
+    }
+    case1Evidence5.close();
+    break;
+
+case 6:
+    cout << "Nombre de Evidencia: " << e6.nombreEvidencia << endl;
+    while (getline(case1Evidence6, linea)) {
+    cout << linea << endl;
+    }
+    case1Evidence6.close();
+    break;
+
+    default:
+    cout << "Opción no válida. Por favor, elige una opción entre 1 y 6. \n";
+    }
+
+    cout << "Presiona X para volver a las evidencias o cualquier otra tecla para salir de las evidencias: \n";
+    cin >> confirm;
+
+} while (confirm == 'x' || confirm == 'X'); 
+
+    cout << "Con esto en mente, tu que piensas" /*usuario*/ << "que evidencia podriamos usar para mostrar mi inocencia en este caso. \n";
+    cin >> optionEvidencia2;
+
+    if (optionEvidencia2 == 1){
+        cout << "Tenemos alrededor de" /*dias */ << "para poder recolectar esta evidencia antes de la audiencia para este caso. \n";
+    } else if (optionEvidencia2 == 2){
+        cout << "Tenemos alrededor de" /*dias */ << "para poder recolectar esta evidencia antes de la audiencia para este caso. \n";
+    } else if (optionEvidencia2 == 3){
+        cout << "Tenemos alrededor de" /*dias */ << "para poder recolectar esta evidencia antes de la audiencia para este caso. \n";
+    } else if (optionEvidencia2 == 4){
+        cout << "Tenemos alrededor de" /*dias */ << "para poder recolectar esta evidencia antes de la audiencia para este caso. \n";
+    } else if (optionEvidencia2 == 5){
+        cout << "Tenemos alrededor de" /*dias */ << "para poder recolectar esta evidencia antes de la audiencia para este caso. \n";
+    } else if (optionEvidencia2 == 6){
+        cout << "Tenemos alrededor de" /*dias */ << "para poder recolectar esta evidencia antes de la audiencia para este caso. \n";
+    } else {
+        cout << "Por favor escoge una de las opciones \n";
+    }
+
+
+
 
     return 0;
+    }
+    
+    
+
+    
 
 
-}
+
+
+
+
 
  //Aqui hacer un loop de evidencia que se pueden crear en un vector y que
  //a medida el juagador vaya seleccionando las evidencia del caso1 estas 
@@ -276,7 +351,7 @@ case 2:
 
 
 
-
+/* while (confirm == 'x');*/
 
 /*
  while (getline(case1Evidence1txt, linea)){ 

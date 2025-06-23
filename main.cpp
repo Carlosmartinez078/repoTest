@@ -132,9 +132,9 @@ while (getline(HistoriaCase1, linea)){
 
 HistoriaCase1.close();
 
-    menuEvidence();
+    menuEvidence(); // use the menu from evidenceMenu.cpp
 
-    selectEvidence(seleccionadas, totalPoints);
+    selectEvidence(seleccionadas, totalPoints); // use selectEvidence from evidenceSelector.cpp
 
 
     return 0;

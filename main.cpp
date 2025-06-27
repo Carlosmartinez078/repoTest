@@ -6,6 +6,7 @@
 #include "headerFiles/evidencia.h" // imports the header for evidence
 #include "headerFiles/otherTxtFiles.h"
 #include "headerFiles/evidenceSelect.h"
+#include "headerFiles/Jugador.h"
 using namespace std;
 
 int main()
@@ -18,6 +19,7 @@ char victorOption;
 int totalPoints = 0;
 const int limitPoints = 23;
 vector<Evidencia> seleccionadas;
+Jugador nombre;
 
 //llama a los archivos en carpeta textFiles para ser leeidos
 string linea; 
@@ -30,8 +32,7 @@ ifstream victorHowCarcel ("textFiles/victorHowCarcel.txt");
 ifstream HistoriaCase1 ("textFiles/HistoriaCase1.txt");
 
 
-cout << "Ingresa tu nombre";
-//hacer un cin en donde se guarde el nombre del usuario en la variable nombreJugador del Struct: Jugador
+nombre.name();
 
   txtDialogFall.showLongDialog(); /*Insertar nombre de usuario de la clase jugador*/ 
   cout << whyArriveLate.character << whyArriveLate.characterDialog;
@@ -124,7 +125,8 @@ victorHowCarcel.close();
  cout << "  Ya que tocamos el tema de los cargos... Creo que es hora que hablemos de ellos"<<endl;
 
  cout << "Victor: "<< endl;
- cout << "  Si... creo que tienes razon " /*nombre del usuario*/ << ". \n   Dime, de que cargos estoy siento inputado."<< endl;
+ cout << "  Si... creo que tienes razon"; nombre.showName();
+ cout << ". Dime, de que cargos estoy siento inputado."<< endl;
  
 while (getline(HistoriaCase1, linea)){
     cout << linea << endl;

@@ -1,14 +1,17 @@
 #include "headerFiles/evidenceSelect.h"
 #include "headerFiles/evidencia.h"
+#include "headerFiles/Jugador.h"
 
 using namespace std;
 
+Jugador nombre;
 void selectEvidence(vector<Evidencia>& seleccionadas, int& totalPoints) {
     int optionEvidencia2;
     char confirm2;
+    bool opcionesUsadas[7] = {false};
 
-
-    cout << "Con esto en mente, tu que piensas" /*usuario*/ << " que evidencia podriamos usar para mostrar mi inocencia en este caso. 1-6 \n";
+    cout << "Con esto en mente, tu que piensas \n"; nombre.showName();
+    cout << "que evidencia podriamos usar para mostrar mi inocencia en este caso. 1-6 \n";
 
     do {
         cout << "Selecciona una opción (1-6) o 0 para salir: \n";
@@ -29,6 +32,12 @@ void selectEvidence(vector<Evidencia>& seleccionadas, int& totalPoints) {
             }
         }
 
+    bool use = opcionesUsadas[optionEvidencia2];
+        if (use) {
+            cout << "\nYa seleccionaste esta evidencia. Elige otra distinta.\n";
+            continue;}
+
+        
         switch (optionEvidencia2) {
             case 1:
                 seleccionadas.push_back(C1E1);
@@ -58,11 +67,18 @@ void selectEvidence(vector<Evidencia>& seleccionadas, int& totalPoints) {
                 cout << "Opción invalida. Elige una opción entre 1-6.\n";
         }
 
+        opcionesUsadas[optionEvidencia2] = true; // opcion como usada
+
         if (totalPoints > 23) {
             cout << "Sobrepasaste el límite de 23 puntos.\n";
             seleccionadas.clear();
             totalPoints = 0;
+        
+        
+        for (int i = 1; i <= 6; ++i) {      // se reinician las opciones
+            opcionesUsadas[i] = false;
         }
+    }
 
     } while (true);
 

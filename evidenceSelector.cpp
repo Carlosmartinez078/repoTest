@@ -4,14 +4,12 @@
 
 using namespace std;
 
-Jugador nombre;
 void selectEvidence(vector<Evidencia>& seleccionadas, int& totalPoints) {
     int optionEvidencia2;
     char confirm2;
     bool opcionesUsadas[7] = {false};
 
-    cout << "Con esto en mente, tu que piensas \n"; nombre.showName();
-    cout << "que evidencia podriamos usar para mostrar mi inocencia en este caso. 1-6 \n";
+    cout << "Con esto en mente, tu que piensas"<< /*user.name*/ "que evidencia podriamos usar para mostrar mi inocencia en este caso. 1-6 \n";
 
     do {
         cout << "Selecciona una opción (1-6) o 0 para salir: \n";
